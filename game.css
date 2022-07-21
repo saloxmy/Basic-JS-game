@@ -11,10 +11,6 @@
     flex-direction: row;
 }
 
-    #figures > div {
-        color: white;
-    }
-
 #buttons {
     display: flex;
     flex-direction: row;
