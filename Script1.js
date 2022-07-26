@@ -209,7 +209,7 @@ function blockGravity() {
                 $('body').append($('<h1>GAME OVER!</h1>').css({ 'color': 'white', 'font-size': '4em', 'font-family': 'monospace' }))
             }
             else if (scoreNumber!=0 && scoreNumber%250==0) {
-                $('body').animate({'background-color': "#"+Math.floor(Math.random() * 16777215).toString(16)+""}, 4000)
+                $('body').animate({ backgroundColor: "#" + Math.floor(Math.random() * 16777215).toString(16) }, 4000);
             }
         },
         complete: function () {
