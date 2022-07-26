@@ -208,7 +208,7 @@ function blockGravity() {
                 $fallingSegment.stop();
                 $('body').append($('<h1>GAME OVER!</h1>').css({ 'color': 'white', 'font-size': '4em', 'font-family': 'monospace' }))
             }
-            else if (scoreNumber!=0 && scoreNumber%250==0) {
+            else if (scoreNumber!=0 && scoreNumber%100==0) {
                 $('body').animate({ backgroundColor: "#" + Math.floor(Math.random() * 16777215).toString(16) }, 4000);
             }
         },
