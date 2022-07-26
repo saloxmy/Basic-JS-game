@@ -127,11 +127,7 @@ function manualMode() {
     function keyFaciliator() {
         document.addEventListener('keypress', displayKeys, false);
         function displayKeys(e) {
-          /*  if (chosenKeys.includes(String.fromCharCode(e.keyCode))){
-                limitNotice.textContent = 'Choose up to 6 DIFFERENT keys';
-            }*/
             if (counter < 6 && e.code !== 'Enter') {
-          //      chosenKeys = chosenKeys + String.fromCharCode(e.keyCode);
                 colorRandomizer(figureGroup.children[counter]);
                 var keyEl = document.createElement('h1');
                 var key = String.fromCharCode(e.keyCode);
@@ -213,8 +209,7 @@ function blockGravity() {
                 $('body').append($('<h1>GAME OVER!</h1>').css({ 'color': 'white', 'font-size': '4em', 'font-family': 'monospace' }))
             }
             else if (scoreNumber!=0 && scoreNumber%250==0) {
-                $fallingSegment.stop();
-                $('body').append($('<h1>YOU WIN!</h1>').css({ 'color': 'white', 'font-size': '4em', 'font-family': 'monospace' }))
+                $('body').animate({'background-color': "#"+Math.floor(Math.random() * 16777215).toString(16)+""}, 4000)
             }
         },
         complete: function () {
